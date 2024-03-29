@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import AlbumCard from './AlbumCard';
 import { useSelector } from 'react-redux';
 
@@ -75,18 +75,18 @@ function MainPage() {
         )}
 
       </Row>
-      <Row className='mt-5'>
-        <h2 className='text-white'>Rock Classics</h2>
-        <div className="row"></div>
-        {rock && rock.length > 0 && (
-          rock.slice(0, 4).map((e, index) =>
-            <AlbumCard songInfo={e} key={index} ></AlbumCard>
+   
+   <Row className='mt-5'>
+          <h2 className='text-white'>Rock Classics</h2>
+          <div className="row"></div>
+          {rock && rock.length > 0 && (
+            rock.slice(0, 4).map((e, index) =>
+              <AlbumCard songInfo={e} key={index} ></AlbumCard>
 
-          )
-        )}
-
-
+            )
+          )}
       </Row>
+   
       <Row className='mt-5'>
         <h2 className='text-white'>Pop Culture</h2>
         <div className="row" ></div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getlike } from '../redux/action/index'
@@ -40,7 +40,10 @@ function PlayerControls() {
     setIsPlaying(false);
   };
 
+useEffect(()=>{
+  setIsPlaying(false)
 
+},[selector])
 
   return (
     <div className="container-fluid fixed-bottom bg-container pt-1">

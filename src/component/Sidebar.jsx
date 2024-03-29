@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { Col, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux'
-import {getFetchAction} from '../redux/action/index'
+import { getFetchAction } from '../redux/action/index'
 const Sidebar = () => {
 
-const dispatch= useDispatch();
-  const[artist,setArtist]=useState("")
+  const dispatch = useDispatch();
+  const [artist, setArtist] = useState("")
 
 
-const handleChange=((e)=>{
-  setArtist(e.target.value)
+  const handleChange = ((e) => {
+    setArtist(e.target.value)
 
 
-})
-    const search =(e)=>{
-      e.preventDefault()
-      console.log(artist)
-      dispatch(getFetchAction(artist))
+  })
+  const search = (e) => {
+    e.preventDefault()
+    console.log(artist)
+    dispatch(getFetchAction(artist))
 
-    }
+  }
 
   return (
     <Col xs={2} className="col-2">
@@ -38,7 +38,7 @@ const handleChange=((e)=>{
               <ul className=''>
                 <li>
                   <Nav.Link href="#" className="nav-item nav-link d-flex align-items-center">
-                  <i className="bi bi-house-door-fill"></i>&nbsp; Home
+                    <i className="bi bi-house-door-fill"></i>&nbsp; Home
                   </Nav.Link>
                 </li>
                 <li>
@@ -75,8 +75,8 @@ const handleChange=((e)=>{
         <div className="nav-btn ">
           <Button variant="light" className="signup-btn rounded-pill" type="button">Sign Up</Button>
           <Button variant="black" className="login-btn rounded-pill" type="button">Login</Button>
-         <p className='m-0'> <a href="#/">Cookie Policy</a> |<a href="#/"> Privacy</a> </p>
-        
+          <p className='m-0'> <a href="#/">Cookie Policy</a> |<a href="#/"> Privacy</a> </p>
+
         </div>
       </Navbar>
     </Col>

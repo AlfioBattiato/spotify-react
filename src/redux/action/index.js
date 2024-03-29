@@ -1,6 +1,7 @@
 export const GET_DATA = 'GET_DATA'
 export const GET_SONG = 'GET_SONG'
 export const GET_LIKE = 'GET_LIKE'
+export const REMOVE_LIKE = 'REMOVE_LIKE'
 
 
 
@@ -14,6 +15,12 @@ export const getSong=(song)=>{
 export const getlike=(value)=>{
   return{
     type:GET_LIKE,
+    payload:value
+}
+}
+export const removelike=(value)=>{
+  return{
+    type:REMOVE_LIKE,
     payload:value
 }
 }

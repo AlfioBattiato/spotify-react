@@ -30,7 +30,6 @@ function MainPage() {
         let { data } = await response.json()
 
         state(data)
-        // console.log(rock)
 
 
       } else {

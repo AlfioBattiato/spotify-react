@@ -10,10 +10,6 @@ const  dataReducer=function(state =initialState, action){
         case GET_DATA:
             return{...state,
                 data:action.payload};
-      
-
-
-
         default :return state;
     }
 }

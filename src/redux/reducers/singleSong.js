@@ -1,10 +1,11 @@
 import { GET_SONG } from "../action";
 import { GET_LIKE } from "../action";
+import { REMOVE_LIKE } from "../action";
 
 
 const initialState={
     data:[],
-    like:false
+    like:[]
 }
 
 const  dataReducer=function(state =initialState, action){
@@ -14,9 +15,12 @@ const  dataReducer=function(state =initialState, action){
                 data:action.payload};
         case GET_LIKE:
             return{...state,
-                like:action.payload};
+                like:[...state.like,action.payload]};
+        case REMOVE_LIKE:
+            return{...state,
+                like:state.like.filter((id)=>id!==action.payload)};
       
-
+              
 
 
         default :return state;
